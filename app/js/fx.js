@@ -196,7 +196,7 @@ export class FX {
           const pop = k < 0.12 ? 0.6 + (k / 0.12) * 0.5 : k < 0.2 ? 1.1 - ((k - 0.12) / 0.08) * 0.1 : 1;
           c.setTransform(dpr * pop, 0, 0, dpr * pop, p.x * dpr, p.y * dpr);
           c.globalAlpha = fade;
-          c.font = `900 ${p.size}px "Dela Gothic One", "Zen Maru Gothic", sans-serif`;
+          c.font = `900 ${p.size}px "ZCOOL QingKe HuangYou", "Noto Sans SC", sans-serif`;
           c.textAlign = 'center'; c.textBaseline = 'middle';
           c.lineWidth = p.size * 0.28; c.lineJoin = 'round'; c.strokeStyle = INK; c.strokeText(p.str, 0, 0);
           c.fillStyle = p.color; c.fillText(p.str, 0, 0);
@@ -272,7 +272,7 @@ const THEME_DRAW = {
     g.beginPath(); g.moveTo(-4, -3); g.quadraticCurveTo(0, 2, 4, -3); g.strokeStyle = '#fff'; g.lineWidth = 1.6; g.stroke();
   }),
   digit: (fx, p) => fx.sprite(`dg${p.color}${p.str}`, 20, 24, (g) => {
-    g.font = '400 22px "Dela Gothic One", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle';
+    g.font = '400 22px "ZCOOL QingKe HuangYou", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle';
     g.lineWidth = 4; g.lineJoin = 'round'; g.strokeStyle = INK; g.strokeText(p.str, 0, 1); g.fillStyle = p.color; g.fillText(p.str, 0, 1);
   }),
 };

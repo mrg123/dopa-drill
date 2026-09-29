@@ -1,6 +1,6 @@
-@font-face { font-family: "Dela Gothic One"; src: url("fonts/dela-gothic-one.woff2") format("woff2"); font-display: block; }
-@font-face { font-family: "Zen Maru Gothic"; src: url("fonts/zen-maru-gothic-bold.woff2") format("woff2"); font-weight: 700; font-display: block; }
-@font-face { font-family: "Zen Maru Gothic"; src: url("fonts/zen-maru-gothic-black.woff2") format("woff2"); font-weight: 900; font-display: block; }
+@font-face { font-family: "ZCOOL QingKe HuangYou"; src: url("fonts/zcool-qingke-huangyou.woff2") format("woff2"); font-display: block; }
+@font-face { font-family: "Noto Sans SC"; src: url("fonts/noto-sans-sc-bold.woff2") format("woff2"); font-weight: 700; font-display: block; }
+@font-face { font-family: "Noto Sans SC"; src: url("fonts/noto-sans-sc-black.woff2") format("woff2"); font-weight: 900; font-display: block; }
 
 :root {
   --ink: #1b1d4d;
@@ -15,8 +15,8 @@
   --red: #ff4f6d;
   --E: 0;
   --kick: 0;
-  --round: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
-  --chunky: "Dela Gothic One", "Zen Maru Gothic", sans-serif;
+  --round: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --chunky: "ZCOOL QingKe HuangYou", "Noto Sans SC", "PingFang SC", sans-serif;
   color-scheme: light;
 }
 
@@ -68,8 +68,8 @@ button:focus-visible { outline: 4px solid var(--yellow); outline-offset: 3px; }
 /* ------------------------------------------------------------ title */
 #screen-title { flex-direction: column; align-items: center; justify-content: flex-start; gap: 14px; padding: calc(28px + env(safe-area-inset-top)) 16px calc(24px + env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; }
 #screen-title > * { flex: none; }
-/* Logo: layered paper cut-outs. A spinning burst sits behind "ドパ",
-   "ドリル" rides on a folded ribbon, operator scraps float around. */
+/* Logo: layered paper cut-outs. A spinning burst sits behind "多巴胺",
+   "刷题" rides on a folded ribbon, operator scraps float around. */
 .logo { position: relative; margin: calc(var(--fs) * 0.62) 0 calc(var(--fs) * 0.2); display: grid; justify-items: center; font-family: var(--chunky); font-weight: 400; line-height: 1; --fs: clamp(64px, 21vw, 96px); }
 .logo-burst { position: absolute; left: 50%; top: calc(var(--fs) * 0.52); width: calc(var(--fs) * 2.7); height: calc(var(--fs) * 2.7); transform: translate(-50%, -50%) rotate(calc(var(--spin, 0) * 1deg)); z-index: -1; filter: drop-shadow(0 6px 0 rgba(27, 29, 77, .9)); }
 .logo-top { display: flex; gap: .02em; font-size: var(--fs); letter-spacing: -.04em; }
@@ -87,8 +87,10 @@ button:focus-visible { outline: 4px solid var(--yellow); outline-offset: 3px; }
 }
 .logo-top i:nth-child(1) { --r: -9deg; color: #fff; }
 .logo-top i:nth-child(2) { --r: 7deg; --dy: -6px; animation-delay: -.8s; }
+.logo-top i:nth-child(3) { --r: -4deg; --dy: 3px; animation-delay: -1.2s; }
 .logo-top i::after { content: attr(data-c); position: absolute; inset: 0; color: var(--blue); clip-path: polygon(0 62%, 100% 50%, 100% 100%, 0 100%); text-shadow: none; }
 .logo-top i:nth-child(2)::after { color: var(--pink); }
+.logo-top i:nth-child(3)::after { color: #a77bff; }
 .logo-ribbon { position: relative; display: flex; justify-content: center; gap: .1em; margin-top: calc(var(--fs) * 0.04); padding: .12em .9em .2em; font-size: calc(var(--fs) * 0.52); color: #fff; transform: rotate(-3deg); }
 .ribbon-bg { position: absolute; inset: -6% -14% -10%; width: 128%; height: 116%; z-index: -1; filter: drop-shadow(0 5px 0 var(--ink)); }
 .logo-ribbon i { text-shadow: 2px 0 0 var(--ink), -2px 0 0 var(--ink), 0 2px 0 var(--ink), 0 -2px 0 var(--ink), 0 4px 0 var(--ink); animation: logo-wave 1.6s ease-in-out infinite; }
@@ -650,7 +652,7 @@ li.done .qbar { background: var(--mint); }
 .skill-news p.capsule-news b { margin-right: 8px; color: #e08a2a; }
 .cr-new i, .gb-new small { font-family: var(--round); line-height: 1.3; margin-bottom: 1px; }
 .cr-new, .gb-new em { line-height: 1; }
-/* id050: review sits right under じぶんレベル. */
+/* id050: review sits right under 我的水平. */
 .modes > .review-main { min-width: 240px; font-weight: 900; }
 .modes > .review-main[hidden] { display: none; }
 
@@ -697,7 +699,7 @@ li.done .qbar { background: var(--mint); }
 .finale-rocket { position: absolute; left: 0; top: 0; width: 180px; height: 120px; transform-origin: 90px 60px; filter: drop-shadow(0 6px 0 rgba(27, 29, 77, .8)); }
 .finale-rocket svg { width: 100%; height: 100%; }
 .finale-banner { position: absolute; left: 0; top: 0; width: 180px; padding: 8px 0; border: 4px solid var(--ink); border-radius: 12px; background: #fff; color: var(--pink); font-family: var(--chunky); font-size: 30px; text-align: center; box-shadow: 0 6px 0 var(--ink); }
-/* id045: "もうすぐ" — the closest next steps. */
+/* id045: "快拿到了" — the closest next steps. */
 .tr-soon { display: grid; grid-template-columns: 40px 1fr 56px; align-items: center; gap: 10px; margin-bottom: 8px; padding: 7px 10px 7px 7px; border: 2.5px solid var(--ink); border-radius: 16px; background: #fff; box-shadow: 0 3px 0 var(--ink); }
 .tr-pct { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: conic-gradient(var(--pink) calc(var(--p) * 360deg), #eceaf3 0); }
 .tr-pct b { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: #fff; font-family: var(--chunky); font-weight: 400; font-size: 12px; }

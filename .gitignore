@@ -3,3 +3,6 @@ node_modules/
 *.log
 .env
 .env.*
+
+# 中文化工具与文案对照表（非运行所需）
+.i18n/

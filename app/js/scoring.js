@@ -50,7 +50,7 @@ export function comboWindowMs(grade = 3, first = false) {
 // Milestones worth a bigger show: 10, 20, 30, 50, 75, 100, then every 50.
 export const comboMilestone = (c) => [10, 20, 30, 50, 75].includes(c) || (c >= 100 && c % 50 === 0);
 
-const UNITS = [[68, '無量大数'], [64, '不可思議'], [60, '那由他'], [56, '阿僧祇'], [52, '恒河沙'], [48, '極'], [44, '載'], [40, '正'], [36, '澗'], [32, '溝'], [28, '穣'], [24, '秭'], [20, '垓'], [16, '京'], [12, '兆'], [8, '億'], [4, '万']];
+const UNITS = [[68, '无量大数'], [64, '不可思议'], [60, '那由他'], [56, '阿僧祇'], [52, '恒河沙'], [48, '极'], [44, '载'], [40, '正'], [36, '涧'], [32, '沟'], [28, '穰'], [24, '秭'], [20, '垓'], [16, '京'], [12, '兆'], [8, '亿'], [4, '万']];
 // Milestones below 万 are celebrated but not used as display units.
 const MILESTONES = [[3, '千'], [2, '百']];
 
