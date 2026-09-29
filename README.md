@@ -57,6 +57,16 @@ node --test tests/*.test.mjs
 | `tools/build_fonts.sh` | 重新生成字体子集（改动画面文案后执行） |
 | `.i18n/` | 本次中文化使用的提取/替换脚本与文案对照表（非游戏运行所需） |
 
+## 中文版截图
+
+| 标题页 | 对局页 |
+| --- | --- |
+| ![标题页](screenshots/dopa-drill-zh-title.png) | ![对局页](screenshots/dopa-drill-zh-play.png) |
+
+| 结算页 | 玩法引导 |
+| --- | --- |
+| ![结算页](screenshots/dopa-drill-zh-result.png) | ![玩法引导](screenshots/dopa-drill-zh-guide.png) |
+
 ## 字体与许可
 
 - 源码：MIT License
