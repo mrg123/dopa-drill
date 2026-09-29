@@ -573,7 +573,7 @@ function giveHelp(st) {
   els.forEach((el) => el.classList.add('hint-glow'));
   if (els[0] && !S.reduced) setTimeout(() => hero.point(centerOf(els[0])), 900);
   if (n >= 3) {
-    $('#step-label').innerHTML = `<b>${st.label}</b><span class="help-text">提示\\u3000${st.help.text}</span>`;
+    $('#step-label').innerHTML = `<b>${st.label}</b><span class="help-text">提示\u3000${st.help.text}</span>`;
     audio.play('blip', audio.now(), { m: 81, v: 0.08 });
   }
 }
@@ -1401,7 +1401,7 @@ function renderSkillNews(el) {
     ...S.newMastered.map((id) => `<p class="mastered">大师！ ${SKILL[id].name}</p>`),
     ...S.newUnlocks.map((id) => `<p>解锁！ ${SKILL[id].name}</p>`),
   ];
-  if (S.plan.placement) items.unshift(`<p>水平测试完成\\u3000通关 ${SKILLS.filter((x) => stateOf(progress(), x.id) === 'mastered').length} 个</p>`);
+  if (S.plan.placement) items.unshift(`<p>水平测试完成\u3000通关 ${SKILLS.filter((x) => stateOf(progress(), x.id) === 'mastered').length} 个</p>`);
   el.innerHTML = items.slice(0, 5).join('');
 }
 function setReviewButton(btn, n) {
@@ -1711,11 +1711,11 @@ function openSkillInfo(id) {
   const times = (r.times || []).filter((e) => e.f);
   const best = times.length ? Math.min(...times.map((e) => e.t)) : null;
   S.skillInfo = id;
-  $('#si-grade').textContent = `${sk.grade} 年级\\u3000${LANES[sk.lane]}`;
+  $('#si-grade').textContent = `${sk.grade} 年级\u3000${LANES[sk.lane]}`;
   $('#si-title').textContent = sk.name;
   $('#si-stars').innerHTML = `${starRow(n)}<span>☆${n} / ${STAR_MAX}</span>`;
   $('#si-next').innerHTML = next ? `<p class="si-label">下一级 ☆${next.n}</p><p class="si-text">${next.text}</p><p class="si-now">${next.now}</p>` : '<p class="si-text done">☆5 达成！好厉害！</p>';
-  $('#si-note').textContent = `做过的 ${rustyOf(prog).includes(id) ? '有点生锈了。首次答对 1 题就能擦亮！　' : ''} 题 ${r.n || 0} 道${best != null ? `\\u3000最快一题 ${(best / 1000).toFixed(1)} 秒` : ''}`;
+  $('#si-note').textContent = `做过的 ${rustyOf(prog).includes(id) ? '有点生锈了。首次答对 1 题就能擦亮！　' : ''} 题 ${r.n || 0} 道${best != null ? `\u3000最快一题 ${(best / 1000).toFixed(1)} 秒` : ''}`;
   $('#skill-info').hidden = false;
   const cardEl = $('#skill-info .modal-card');
   if (!S.reduced) tween(260, (k) => { cardEl.style.transform = `translateY(${(1 - k) * 30}px) scale(${0.92 + 0.08 * k})`; }, easeOutBack).then(() => { cardEl.style.transform = ''; });
@@ -2190,7 +2190,7 @@ function renderCollection() {
       const own = ul.isUnlocked(it, got);
       const on = !auto && eq[co.cat] === it.id;
       const tro = it.trophy && tr.TROPHY[it.trophy];
-      return `<button type="button" class="co-item${own ? '' : ' locked'}${on ? ' on' : ''}" data-id="${it.id}"${own ? '' : ` aria-label="未获得\\u3000奖杯 ${tro ? tro.name : ''} 可解锁"`}><span class="co-th">${itemThumb(it)}</span><span class="co-name">${own ? it.name : '？？？'}</span>${own ? '<small>&nbsp;</small>' : `<small class="co-lock">奖杯「${tro ? tro.name : ''}」</small>`}</button>`;
+      return `<button type="button" class="co-item${own ? '' : ' locked'}${on ? ' on' : ''}" data-id="${it.id}"${own ? '' : ` aria-label="未获得\u3000奖杯 ${tro ? tro.name : ''} 可解锁"`}><span class="co-th">${itemThumb(it)}</span><span class="co-name">${own ? it.name : '？？？'}</span>${own ? '<small>&nbsp;</small>' : `<small class="co-lock">奖杯「${tro ? tro.name : ''}」</small>`}</button>`;
     }).join('');
   const all = ul.ITEMS.length; const own = ul.ITEMS.filter((it) => ul.isUnlocked(it, got)).length;
   $('#collect-count').textContent = `${own} / ${all}`;
@@ -2369,8 +2369,8 @@ function openDay(key) {
   $('#day-list').innerHTML = list.slice().reverse().map((h) => {
     const t = new Date(h.at);
     const name = (MODE_NAMES[h.mode] || (() => h.mode))(h);
-    const extra = h.extraOk ? `\\u3000加时 ${h.extraOk} 题` : '';
-    return `<li><span class="t">${t.getHours()}:${String(t.getMinutes()).padStart(2, '0')}</span><span class="m">${name}</span><span class="s">${(h.score || 0).toLocaleString('ja-JP')} 分</span><span class="d">答对 ${h.ok ?? '-'}\\u3000差一点 ${h.ng ?? '-'}${extra}\\u3000${fmtTime(h.timeMs || 0)}</span></li>`;
+    const extra = h.extraOk ? `\u3000加时 ${h.extraOk} 题` : '';
+    return `<li><span class="t">${t.getHours()}:${String(t.getMinutes()).padStart(2, '0')}</span><span class="m">${name}</span><span class="s">${(h.score || 0).toLocaleString('ja-JP')} 分</span><span class="d">答对 ${h.ok ?? '-'}\u3000差一点 ${h.ng ?? '-'}${extra}\u3000${fmtTime(h.timeMs || 0)}</span></li>`;
   }).join('');
   $('#day-log').hidden = false;
   audio.unlock();

@@ -1,11 +1,11 @@
 // Title tour: captions belong to the interface, never to the mascot.
-const INTRO = { title: '玩法', text: '出题有 3 种\\n选择方式哦' };
-const LEVEL = { target: '#start', title: '我的水平', text: '为你量身出的题。\\n一开始先做水平测试' };
-const GRADES = { target: '.grades', title: '1 年级～6 年级', text: '按年级\\n集中练习' };
-const TREE = { target: '#open-tree', title: '技能树', text: '挑一道想练的题，\\n单个技能练习' };
-const TROPHY = { target: '#open-trophy', title: '奖杯', text: '玩就能拿到哦。\\n连续玩还会越来越多' };
-const COLLECTION = { target: '#open-collect', title: '收藏', text: '拿到奖杯奖励会解锁更多\\n背景・音乐・换装等等，\\n都可以自由选择哦' };
-const LAST = { target: '#start', title: '不知道选哪个就用「我的水平」！', text: '这份说明\\n点 ？ 还能再看哦', recommend: true };
+const INTRO = { title: '玩法', text: '出题有 3 种\n选择方式哦' };
+const LEVEL = { target: '#start', title: '我的水平', text: '为你量身出的题。\n一开始先做水平测试' };
+const GRADES = { target: '.grades', title: '1 年级～6 年级', text: '按年级\n集中练习' };
+const TREE = { target: '#open-tree', title: '技能树', text: '挑一道想练的题，\n单个技能练习' };
+const TROPHY = { target: '#open-trophy', title: '奖杯', text: '玩就能拿到哦。\n连续玩还会越来越多' };
+const COLLECTION = { target: '#open-collect', title: '收藏', text: '拿到奖杯奖励会解锁更多\n背景・音乐・换装等等，\n都可以自由选择哦' };
+const LAST = { target: '#start', title: '不知道选哪个就用「我的水平」！', text: '这份说明\n点 ？ 还能再看哦', recommend: true };
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 
 // Use measured body + arm bounds. Hard constraints always outrank label coverage.
@@ -204,7 +204,7 @@ export function createGuide({ hero, reduced, onClose }) {
     $('#guide-text').textContent = page.text;
     overlay.classList.toggle('guide-last', !!page.recommend);
     if (page.recommend) {
-      $('#guide-text').replaceChildren(document.createTextNode('这份说明\\n'));
+      $('#guide-text').replaceChildren(document.createTextNode('这份说明\n'));
       const icon = document.createElement('span');
       icon.id = 'guide-help-icon';
       icon.className = 'icon-btn guide-help-icon';
