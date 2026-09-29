@@ -50,8 +50,8 @@ node --test tests/*.test.mjs
 | 路径 | 内容 |
 | --- | --- |
 | `app/` | 游戏本体（无第三方依赖的 ES Modules） |
-| `docs/SPEC.md` | 规格说明书（日文原始文档） |
-| `docs/curriculum.md` | 分年级课程与技能树设计（日文原始文档） |
+| `docs/SPEC.md` | 规格说明书（中文版，译自上游日文原文） |
+| `docs/curriculum.md` | 分年级课程与技能树设计（中文版，译自上游日文原文） |
 | `docs/dopakichi.svg` | 吉祥物「多巴奇」的造型原稿 |
 | `tests/` | 单元测试 |
 | `tools/build_fonts.sh` | 重新生成字体子集（改动画面文案后执行） |
