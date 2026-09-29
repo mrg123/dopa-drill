@@ -53,5 +53,10 @@ Exceptions to the MIT License
 
 2. Fonts
 
-   The fonts in app/fonts/ (Dela Gothic One, Zen Maru Gothic) are licensed under
-   the SIL Open Font License 1.1. See the OFL-*.txt files in that directory.
+   The fonts in app/fonts/ are licensed under the SIL Open Font License 1.1.
+   See the OFL-*.txt files in that directory.
+
+   Chinese edition note: this fork ships Noto Sans SC (Bold / Black) and
+   ZCOOL QingKe HuangYou instead of the original Dela Gothic One and
+   Zen Maru Gothic. Both are distributed under the SIL Open Font License 1.1,
+   so the terms of this section are unchanged.

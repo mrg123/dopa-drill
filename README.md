@@ -4,7 +4,17 @@
 
 吉祥物「多巴奇」会把你输入的数字搬来搬去，答对就为你庆祝。题目做得越多，画面和声音就越丰富，最后会热闹得像过节。答错也不会掉气势，更没有 Game Over。
 
-> 本仓库是 [grmchn/dopa-drill](https://github.com/grmchn/dopa-drill)（原日文版《ドパドリル》）的简体中文本地化版本：界面文案、吉祥物与音乐名称全部译为中文，字体子集也换成中文字体重新生成。
+> 本仓库是 [grmchn/dopa-drill](https://github.com/grmchn/dopa-drill)（原日文版《ドパドリル》）的**非官方**简体中文本地化版本：界面文案、吉祥物与音乐名称全部译为中文，字体子集也换成中文字体重新生成。不是官方作品，与原作者的官方版本无关。
+
+## 把本作放到自己网站前请注意（许可要点）
+
+| 内容 | 授权 | 自建站时要注意 |
+| --- | --- | --- |
+| 源代码（`app/js/`、`app/style.css`、`app/index.html` 等） | **MIT License** | 可自由使用、修改、公开，甚至商用；但必须保留 LICENSE 中的版权声明与许可全文（部署目录里放一份 LICENSE、页面里给个链接即可） |
+| 吉祥物「多巴奇」与「ドパドリル / 多巴胺刷题」的名称、Logo（含 `app/js/dopakichi.js`、`docs/dopakichi.svg`、`app/icon.svg`、`app/index.html` 中的 Logo） | **MIT 例外条款**，仅允许非商业使用 | 非商业站点可直接发布，但必须写明「非官方改版」；**带广告、带货、付费课程/产品等商业用途，需事先取得作者许可**（只有「游玩视频/直播」被明确允许带广告或打赏收益） |
+| 字体（`app/fonts/`，Noto Sans SC、站酷庆科黄油体 / ZCOOL QingKe HuangYou） | SIL Open Font License 1.1 | 可随游戏一起分发/自托管；需保留 `OFL-*.txt` 许可文件，不得单独售卖字体 |
+
+完整条款以 [LICENSE](LICENSE) 的英文原文为准（英文优先于本段中文）。
 
 ## 特点
 
